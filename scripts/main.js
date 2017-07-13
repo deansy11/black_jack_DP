@@ -17,6 +17,10 @@ let allCards = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"
       for (let i = 0; i < cards.length; i++) {
           if(cards[i] === "K" || cards[i] === "Q" || cards[i] === "J") {
             cards[i] = 10;
+          } else if( cards[i] === "A" && totalValue <= 10) {
+            cards[i] = 11;
+          } else if( cards[i] === "A" && totalValue > 10) {
+            cards[i] = 1;
           }
           totalValue = parseInt(cards[i]) + totalValue;
         }
