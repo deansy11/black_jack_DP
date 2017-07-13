@@ -9,13 +9,45 @@
    write your logic.
 */
 
+let allCards = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
 
-function handValue(cards) {
-  let totalValue = 0;
+    function handValue(cards) {
+      let totalValue = 0;
 
-  for (let i = 0; i < cards.length; i++) {
-      totalValue = parseInt(cards[i]) + totalValue;
+      for (let i = 0; i < cards.length; i++) {
+          if(cards[i] === "K") {
+            cards[i] = 10;
+          }
+          totalValue = parseInt(cards[i]) + totalValue;
+        }
+      //   cards[i] = parseInt(cards [i]);
+      // }
+
+    // loop over all cards and convert to total value
+    // convert string value into number
+    // add numerical value to total value
+
+      return totalValue;
     }
+
+
+// function handValue(cards) {
+//   let totalValue = 0;
+//   for (let i = 0; i < cards.length; i++) {
+//     let value = parseInt(allCards[i]);
+//
+//     if(allCards[i] === "J" || allCards[i] === "K" || allCards[i] === "Q") {
+//       allCards = 10;
+//     for (let t = 0; t < allCards.length; t++){
+//       totalValue = cards[i] + totalValue;
+//       }
+//
+//       }
+//
+//     }
+//     return totalValue;
+//
+//   }
   //   cards[i] = parseInt(cards [i]);
   // }
 
@@ -24,8 +56,6 @@ function handValue(cards) {
 // convert string value into number
 // add numerical value to total value
 
-  return totalValue;
-}
 
 
 /* -----  Hints ------
